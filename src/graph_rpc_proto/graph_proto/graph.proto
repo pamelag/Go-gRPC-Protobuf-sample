@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "graph_rpc_proto";
+option java_outer_classname = "GraphProto";
+
+package graph_proto;
+
+// The greeting service definition.
+service Graph {
+  // Sends a greeting
+  rpc CreateGraph (GraphRequest) returns (GraphReply) {}
+
+}
+
+// The request message containing the graph's name.
+message GraphRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message GraphReply {
+  string message = 1;
+}
